@@ -234,6 +234,7 @@ def liver():
 def predict_liver_disease():
 
     if request.method == 'POST':
+        print(request.form)
         int_features = [float(x) for x in request.form.values()]
         final_features = [np.array(int_features)]
         output = liverprediction(final_features)
