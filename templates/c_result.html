@@ -5,11 +5,11 @@
 <div class="container mb-5 pt-5" text>
     <h1 class="text-center">Breast Cancer Prediction Result</h1>
     {% if prediction==1 %}
-        <h1>Prediction: <span class='danger'>Oops! You have CANCER.</span></h1>
-        <img class="gif" src="{{ url_for('static', filename='sad.gif') }}" alt="CANCER Image">
+        <h1>Prediction: <span class='danger'>Упс! У тебя РАК.</span></h1>
+        <img class="gif container" src="{{ url_for('static', filename='sad.gif') }}" alt="CANCER Image" style="width: 50%; height: auto;">
     {% elif prediction==0 %}
-        <h1>Prediction: <span class='safe'>Great! You DON'T have CANCER.</span></h1>
-        <img class="gif1" src="{{ url_for('static', filename='negative_result.gif') }}" alt="Not CANCER Image">
+        <h1>Prediction: <span class='safe'>Отлично! У вас НЕТ РАКА!</span></h1>
+        <img class="gif1 container" src="{{ url_for('static', filename='negative_result.gif') }}" alt="Not CANCER Image" style="width: 50%; height: auto;">
     {% endif %}
 </div>
 {% endblock %}

@@ -8,11 +8,11 @@
 	<!-- Result -->
 	<div class="text-center">
 		{% if prediction==1 %}
-			<h1>Prediction: <span class='danger'>Oops! You have DIABETES.</span></h1>
-			<img class="gif" src="{{ url_for('static', filename='diabetes.jpg') }}" alt="Diabetes Image">
+			<h1>Prediction: <span class='danger'>Упс! У вас ДИАБЕТ.</span></h1>
+			<img class="gif container" src="{{ url_for('static', filename='diabetes.jpg') }}" alt="Diabetes Image" style="width: 50%; height: auto;">
 		{% elif prediction==0 %}
-			<h1>Prediction: <span class='safe'>Great! You DON'T have diabetes.</span></h1>
-			<img class="gif1" src="{{ url_for('static', filename='no-diabetes.gif') }}" alt="Not Diabetes Image">
+			<h1>Prediction: <span class='safe'>Отлично! У тебя НЕТ диабета.</span></h1>
+			<img class="gif1 container" src="{{ url_for('static', filename='no-diabetes.gif') }}" alt="Not Diabetes Image" style="width: 50%; height: auto;">
 		{% endif %}
 	</div>
 {% endblock %}

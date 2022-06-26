@@ -4,7 +4,7 @@
 <div class="container px-5 col-lg-8 col-sm-10 text-center" style="height:50vh">
     <h1 class="text-center">Предсказывание рака молочной железы</h1>
     <form action="{{ url_for('predict_cancer') }}" method="POST">
-        <div class="row">
+        <div class="row container">
             <div class="col-lg-4 col-sm-10 px-2 mx-auto">
                 <input type="text" class="form-input" id="Radius_mean" name="Radius_mean" placeholder="Radius mean" required><br>
                 <input type="text" class="form-input" id="Texture_mean" name="Texture_mean" placeholder="Texture mean" required><br>

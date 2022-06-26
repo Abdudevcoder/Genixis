@@ -1,6 +1,8 @@
+
+
 .body-custom{
     width: 100%;
-    background: url(back1.jpg) no-repeat;
+    background: url(back1.jpg) repeat-x;
     background-size: 100%;
 }
 
@@ -48,4 +50,15 @@ footer{
 .row {
     display: flex;
     justify-content: space-between;
+}
+
+.text-center {
+    color: aliceblue;
+}
+
+.lb-lg{
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-style: bold;
 }

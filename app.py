@@ -57,7 +57,7 @@ def predict_diabetes():
             return render_template('d_result.html', prediction=my_prediction)
         except ValueError:
             flash(
-                'Invalid input. Please fill in the form with appropriate values', 'info')
+                'Неправильный ввод. Пожалуйста, заполните форму с соответствующими значениями', 'info')
             return redirect(url_for('diabetes'))
 
 
@@ -137,7 +137,7 @@ def predict_heart():
             return render_template('h_result.html', prediction=prediction)
         except ValueError:
             flash(
-                'Invalid input. Please fill in the form with appropriate values', 'info')
+                'Неправильный ввод. Пожалуйста, заполните форму с соответствующими значениями', 'info')
             return redirect(url_for('heart'))
 
 
@@ -184,8 +184,7 @@ def fetal_health_prediction():
 
 
 def strokeValuePredictor(s_predict_list):
-    '''function to predict the output by data we get
-    from the route'''
+    '''функция для прогнозирования вывода по данным, которые мы получаем с маршрута'''
 
     model = joblib.load('Models/stroke_model.pkl')
     data = np.array(s_predict_list).reshape(1, -1)

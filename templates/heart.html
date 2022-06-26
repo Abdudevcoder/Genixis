@@ -1,7 +1,7 @@
 {% extends "layout.html" %} {% block body %}
 <br />
 <div class="container">
-  <h1 class="text-center"><u>Heart Disease Prediction</u></h1>
+  <h1 class="text-center"><u>Предсказывание сердечных заболеваний</u></h1>
 </div>
 <div class="container-castome mx-auto">
   {% with messages = get_flashed_messages(with_categories=true) %} {% if
@@ -14,48 +14,48 @@
   {% endif %} {% endwith %}
   <form action="{{ url_for('predict_heart') }}" method="POST">
     <div class="form-group">
-      <label class="lb-lg">Age</label>
+      <label class="lb-lg">Возраст</label>
       <input
         type="text"
         class="form-control"
         name="age"
-        placeholder="Age (years) eg. 34"
+        placeholder="Возраст"
       />
     </div>
 
     <div class="form-group">
-      <label class="lb-lg">Sex</label>
+      <label class="lb-lg">Пол</label>
       <select class="form-control" name="sex">
-        <option value="0">Female</option>
-        <option value="1">Male</option>
+        <option value="0">Женщина</option>
+        <option value="1">Мужчина</option>
       </select>
     </div>
 
     <div class="form-group">
-      <label class="lb-lg">Chest Pain</label>
+      <label class="lb-lg">Боль в груди</label>
       <select class="form-control" name="chestpaintype">
-        <option value="1">Yes</option>
-        <option value="0">No</option>
+        <option value="1">Да</option>
+        <option value="0">Нет</option>
       </select>
     </div>
 
     <div class="form-group">
-      <label class="lb-lg">Trestbps</label>
+      <label class="lb-lg">Эстакады</label>
       <input
         type="text"
         class="form-control"
         name="trestbps"
-        placeholder="Trestbps"
+        placeholder="Эстакады"
       />
     </div>
 
     <div class="form-group">
-      <label class="lb-lg">Serum Cholestoral</label>
+      <label class="lb-lg">Холесторал в сыворотке крови</label>
       <input
         type="text"
         class="form-control"
         name="serumcholestoral"
-        placeholder="Serum cholestoral in mg/dl"
+        placeholder="Холесторал в сыворотке крови (mg/dl)"
       />
     </div>
 
@@ -70,12 +70,12 @@
     </div>
 
     <div class="form-group">
-      <label class="lb-lg">Thalach</label>
+      <label class="lb-lg">Талах</label>
       <input
         type="text"
         class="form-control"
         name="thalach"
-        placeholder="Thalach"
+        placeholder="Талах"
       />
     </div>
 
@@ -115,7 +115,7 @@
     </div>
 
     <div class="text-center mb-5 pb-4">
-      <input type="submit" class="my-cta-button" value="Predict" />
+      <input type="submit" class="my-cta-button" value="Пройти тест" />
     </div>
   </form>
 </div>
